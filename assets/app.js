@@ -62,9 +62,6 @@ $("#add-train-btn").on("click", function(event) {
     console.log(trainDest);
     console.log(trainStart);
     console.log(trainFreq);
-  
-    // Prettify the train start
-    // var trainStartPretty = moment.unix(trainStart).format("***");
     
     // Moment.JS logic
     // First Time (pushed back 1 year to make sure it comes before current time)
