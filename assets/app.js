@@ -67,13 +67,8 @@ $("#add-train-btn").on("click", function(event) {
     // var trainStartPretty = moment.unix(trainStart).format("***");
     
     // Moment.JS logic
-    var tFrequency = 3;
-
-    // Time is 3:30 AM
-    var firstTime = "03:30";
-
     // First Time (pushed back 1 year to make sure it comes before current time)
-    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    var firstTimeConverted = moment(trainStart, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
 
     // Current Time
@@ -85,11 +80,11 @@ $("#add-train-btn").on("click", function(event) {
     console.log("DIFFERENCE IN TIME: " + diffTime);
 
     // Time apart (remainder)
-    var tRemainder = diffTime % tFrequency;
+    var tRemainder = diffTime % trainFreq;
     console.log(tRemainder);
 
     // Minute Until Train
-    var tMinutesTillTrain = tFrequency - tRemainder;
+    var tMinutesTillTrain = trainFreq - tRemainder;
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
