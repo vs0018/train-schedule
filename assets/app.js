@@ -1,13 +1,13 @@
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAknC--rGI2sx8FVKjXDjyDGgIh4RndILs",
-        authDomain: "train-schedule-83cf0.firebaseapp.com",
-        databaseURL: "https://train-schedule-83cf0.firebaseio.com",
-        projectId: "train-schedule-83cf0",
-        storageBucket: "train-schedule-83cf0.appspot.com",
-        messagingSenderId: "761811730905"
-    };
-    firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAknC--rGI2sx8FVKjXDjyDGgIh4RndILs",
+    authDomain: "train-schedule-83cf0.firebaseapp.com",
+    databaseURL: "https://train-schedule-83cf0.firebaseio.com",
+    projectId: "train-schedule-83cf0",
+    storageBucket: "train-schedule-83cf0.appspot.com",
+    messagingSenderId: "761811730905"
+  };
+  firebase.initializeApp(config);
 
     var database = firebase.database();
 
@@ -18,7 +18,7 @@ $("#add-train-btn").on("click", function(event) {
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#dest-input").val().trim();
-    var trainStart = moment($("#first-time-input").val().trim());
+    var trainStart = moment($("#first-time-input").val().trim(), "HHmm").format("HH:mm");
     var trainFreq = $("#freq-input").val().trim();
   
     // Creates local "temporary" object for holding train data
