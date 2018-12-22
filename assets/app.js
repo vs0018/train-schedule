@@ -1,3 +1,14 @@
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAknC--rGI2sx8FVKjXDjyDGgIh4RndILs",
+        authDomain: "train-schedule-83cf0.firebaseapp.com",
+        databaseURL: "https://train-schedule-83cf0.firebaseio.com",
+        projectId: "train-schedule-83cf0",
+        storageBucket: "train-schedule-83cf0.appspot.com",
+        messagingSenderId: "761811730905"
+    };
+    firebase.initializeApp(config);
+    
     // Assumptions
     var tFrequency = 3;
 
